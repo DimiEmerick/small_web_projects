@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte: arial;
+
+    --cor-fonte: #073124;
+    --contraste-escuro: #2D775F;
+    --contraste-claro: #9EB36D;
+    --fundo: #F2E6B9;
+}
