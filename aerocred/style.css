@@ -1,16 +1,94 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fonte-comum);
 }
 
 :root {
-    --fonte: arial;
+    --fonte-titulo: 'Staatliches', cursive;
+    --fonte-comum: 'Roboto', sans-serif;
 
     --cor-fonte: #073124;
-    --contraste-escuro: #2D775F;
+    --contraste-escuro: #0e5a41;
     --contraste-claro: #9EB36D;
+    --oposto: rgb(140, 42, 42);
+    --oposto-claro: rgb(170, 51, 51);
+    --oposto-escuro: rgb(61, 15, 15);
     --fundo: #F2E6B9;
+}
+
+
+/*  CABEÇALHO  */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(90deg, rgb(35, 35, 35), var(--contraste-escuro));
+    height: 100px;
+    padding: 15px;
+}
+header img {
+    width: 125px;
+}
+
+h1 {
+    color: rgb(195, 190, 190);
+    font-family: var(--fonte-titulo);
+    font-size: 1.25em;
+    text-align: center;
+}
+
+
+/*  MENU  */
+nav {
+    background-image: linear-gradient(90deg, rgb(35, 35, 35), var(--contraste-escuro));
+    border-bottom: 1px solid rgb(6, 6, 6);
+    text-align: center;
+}
+nav i {
+    color: rgb(195, 190, 190);
+    font-size: 1.25em;
+    padding: 5px;
+}
+
+menu {
+    transition-duration: .25s;
+}
+menu ul {
+    background-color: rgb(61, 15, 15);
+    list-style-type: none;
+    padding: 5px;
+}
+menu > ul > li {
+    display: block;
+    background-color: var(--oposto);
+    padding-top: 5px;
+    margin: 5px;
+    border-radius: 2.5px;
+}
+menu > ul > li:hover {
+    background-color: var(--oposto-claro);
+    transition-duration: .1s;
+}
+
+ul > li > ul > li {
+    background-color: rgb(170, 51, 51);
+    padding: 5px;
+    margin: 2.5px;
+    border-radius: 2.5px;
+}
+ul > li > ul > li:hover {
+    background-color: var(--oposto);
+    transition-duration: .1s;
+}
+
+menu a {
+    color: rgb(195, 190, 190);
+    text-decoration: none;
+    padding: 5px;
 }
