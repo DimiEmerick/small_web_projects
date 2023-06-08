@@ -50,7 +50,7 @@ nav {
     border-bottom: 1px solid rgb(6, 6, 6);
     text-align: center;
 }
-nav i {
+nav > i {
     color: rgb(195, 190, 190);
     font-size: 1.25em;
     padding: 5px;
@@ -75,20 +75,32 @@ menu > ul > li:hover {
     background-color: var(--oposto-claro);
     transition-duration: .1s;
 }
-
-ul > li > ul > li {
+menu a {
+    color: rgb(195, 190, 190);
+    text-decoration: none;
+    padding: 5px;
+} 
+menu ul li:hover > .subitens {
+    display: block;
+}
+  
+.subitens {
+    display: none;
+    padding: 5px;
+} 
+.subitens li {
+    display: block;
+}
+.subitens li a {
+    text-decoration: none;
+}
+.subitens > li {
     background-color: rgb(170, 51, 51);
     padding: 5px;
     margin: 2.5px;
     border-radius: 2.5px;
 }
-ul > li > ul > li:hover {
+.subitens > li:hover {
     background-color: var(--oposto);
     transition-duration: .1s;
-}
-
-menu a {
-    color: rgb(195, 190, 190);
-    text-decoration: none;
-    padding: 5px;
 }
