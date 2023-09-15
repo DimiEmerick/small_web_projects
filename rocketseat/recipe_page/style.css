@@ -34,6 +34,10 @@ h1, h2, h3 {
     margin: 20px 0 10px 0;
 }
 
+figure {
+    text-align: center;
+}
+
 figcaption {
     color: var(--footer);
     font-size: small;
@@ -44,7 +48,6 @@ img {
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 50px;
-    margin: auto;
 }
 
 ul {
