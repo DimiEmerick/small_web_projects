@@ -2,13 +2,31 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.ligth {
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+}
+
 body {
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 #container {
@@ -30,6 +48,7 @@ body * {
     margin-top: 8px;
 }
 
+
 /*  LINKS  */
 ul {
     list-style-type: none;
@@ -46,8 +65,8 @@ ul li a{
 
     padding: 16px 24px;
 
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
     border-radius: 5px;
 
     backdrop-filter: blur(4px);
@@ -59,9 +78,10 @@ ul li a{
     transition: background .5s;
 }
 ul li a:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid white;
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
 }
+
 
 /*  SOCIAL LINKS  */
 #social-links {
@@ -80,7 +100,7 @@ ul li a:hover {
     transition: ease .15s;
 }
 #social-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--highlight-color);
 }
 
 /*  RODAPÉ  */
